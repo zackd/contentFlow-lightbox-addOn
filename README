@@ -1,0 +1,21 @@
+Re-wrote the 'onclickActiveItem' function in ContentFlowAddOn_lightbox.js
+Changed lightbox.css : added CSS transparency, and CSS3 box-shadow
+
+it now opens images in the lightbox by default (no change here!), or opens a href (+ target param) if provided:
+
+opens image in lightbox:
+
+<a class="item">
+    <img class="content" src="/media/xlsrc/images/indoor_show.jpg"  alt="indoor-show" />
+    <span class="caption">indoor show</span>
+</a>
+
+opens link in new window:
+
+ <a class="item" href="http://www.google.co.uk/" target="_blank">
+    <img class="content" src="/media/xlsrc/images/indoor_show.jpg" alt="indoor-show" />
+    <span class="caption">indoor show</span>
+</a>
+
+Was a bit tricky getting this to work smoothly in IE, but its good to go.
+Tested roughly in IE6, IE7, Google Chrome, Safari, Firefox.
