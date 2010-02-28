@@ -29,6 +29,7 @@ new ContentFlowAddOn ('lightbox', {
             var url, target;
             if (item.element['href']){
                 url = item.element['href'];
+                item.preventDefault();
             }
             else if (item.element.getAttribute('href')) {
                 url = item.element.getAttribute('href');
@@ -36,7 +37,9 @@ new ContentFlowAddOn ('lightbox', {
             if (typeof url !== "undefined" && url !== null) {
                 if (item.element.getAttribute('target')) {
                     target = item.element.getAttribute('target')
-                    window.open(url, target).focus();
+                    if (typeof url !== "undefined" && url !== null) {
+                        window.open(url, target).focus();
+                    }
                 }
                 else {
                     window.location.href = url;
@@ -54,6 +57,7 @@ new ContentFlowAddOn ('lightbox', {
                     showLightbox(item.content);
                 }
             }
+            return false;
         }
     }
 
