@@ -29,6 +29,7 @@ new ContentFlowAddOn ('lightbox', {
             var url, target;
             if (item.element['href']){
                 url = item.element['href'];
+                return false; // prevent default in IE
                 item.preventDefault();
             }
             else if (item.element.getAttribute('href')) {
@@ -57,7 +58,6 @@ new ContentFlowAddOn ('lightbox', {
                     showLightbox(item.content);
                 }
             }
-            return false;
         }
     }
 
