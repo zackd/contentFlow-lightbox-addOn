@@ -21,7 +21,7 @@
 	background: #282828;
     opacity: 0.9; /* all other browsers */
 	-moz-opacity: 0.9; /* mozilla */
-	filter: alpha(opacity=90); /* IE 5 - 7 */
+	filter: alpha(opacity=00); /* IE 5 - 7 */
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; /* IE 8 */
 	}
 	
